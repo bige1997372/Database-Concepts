@@ -1,4 +1,5 @@
-**IDEF1x数据建模方法
+## IDEF1x数据建模方法  
+
 IDEF的含义是集成计算机辅助制造（Integrated　Computer－AidedManufacturing，ICAM)DEFinition。最初的IDEF方法是在美国空军ICAM项目建立的。根据用途，可以把IDEF族方法分成两类：第一类IDEF方法的作用是沟通系统集成人员之间的信息交流。主要有：IDEF0、IDEF1、IDEF3、IDEF5。IDEF0通过对功能的分解、功能之间关系的分类（如按照输入、输出、控制和机制分类）来描述系统功能。IDEF1用来描述企业运作过程中的重要信息。IDEF3支持系统用户视图的结构化描述。IDEF5用来采集事实和获取知识。第二类IDEF方法的重点是系统开发过程中的设计部分。目前有两种IDEF设计方法：IDEF1X和IDEF4。IDEF1X可以辅助语义数据模型的设计。IDEF4可以产生面向对象实现方法所需的高质量的设计产品。
 
 IDEF1X是IDEF系列方法中IDEF1的扩展版本，是在E-R(实体联系)方法的原则基础上,增加了一些规则，使语义更为丰富的一种方法。概念模型设计常用IDEF1X方法，它就是把实体-联系方法应用到语义数据模型中的一种语义模型化技术，用于建立系统信息模型。IDEF1的最初形式是在P.P.S (Peter) Chen的实体联系模型化概念与P.P.(Ted) Codd的关系理论的基础上发展起来的。IDEF1X是IDEF1的扩展版本，除在图形表达和模型化过程方面的改进外，还对语义进行了增强和丰富。例如：分类联系 (Categorization Relationships)的引入。
