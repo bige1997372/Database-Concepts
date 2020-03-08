@@ -3,8 +3,8 @@
 
 ### 列举聚集，弱实体，细化泛化的使用例子。
 #### 聚集
-![Image](https://github.com/bige1997372/Database-Concepts/raw/master/img_folder/juji.png)
+学生上课时使用计算机。
 #### 弱实体
-![Image](https://github.com/bige1997372/Database-Concepts/raw/master/img_folder/弱实体.png)
+学生出事时紧急联络家长，家长为弱实体
 #### 分化/泛化
-![Image](https://github.com/bige1997372/Database-Concepts/raw/master/img_folder/fenhuafanhua.png)
+交通工具分化为自行车和汽车。
