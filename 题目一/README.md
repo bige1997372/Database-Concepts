@@ -3,8 +3,8 @@
 
 ###列举聚集，弱实体，细化泛化的使用例子。
 ####聚集
-![Image](https://raw.githubusercontent.com/bige1997372/Database-Concepts/img_folder/juji.pdf)
+![Image](https://raw.githubusercontent.com/bige1997372/Database-Concepts/img_folder/juji.png)
 ####弱实体
-![Image](https://raw.githubusercontent.com/bige1997372/Database-Concepts/img_folder/弱实体.pdf)
+![Image](https://raw.githubusercontent.com/bige1997372/Database-Concepts/img_folder/弱实体.png)
 ####分化/泛化
-![Image](https://raw.githubusercontent.com/bige1997372/Database-Concepts/img_folder/fenhuafanhua.pdf)
+![Image](https://raw.githubusercontent.com/bige1997372/Database-Concepts/img_folder/fenhuafanhua.png)
