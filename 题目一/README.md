@@ -5,6 +5,6 @@
 #### 聚集
 ![Image](https://github.com/bige1997372/Database-Concepts/raw/master/img_folder/juji.png)
 #### 弱实体
-![Image](https://github.com/bige1997372/Database-Concepts/img_folder/弱实体.png)
+![Image](https://github.com/bige1997372/Database-Concepts/raw/master/img_folder/弱实体.png)
 #### 分化/泛化
-![Image](https://github.com/bige1997372/Database-Concepts/img_folder/fenhuafanhua.png)
+![Image](https://github.com/bige1997372/Database-Concepts/raw/master/img_folder/fenhuafanhua.png)
