@@ -11,3 +11,6 @@
 #### 分化/泛化
 交通工具分化为自行车和汽车。
 ![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E9%A2%98%E7%9B%AE%E4%B8%80/%E7%BB%86%E5%8C%96%E6%B3%9B%E5%8C%96%20.png)
+
+### 画出相应ER图  
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E9%A2%98%E7%9B%AE%E4%B8%80/1_3.png)
