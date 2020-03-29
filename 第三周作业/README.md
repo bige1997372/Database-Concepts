@@ -7,27 +7,27 @@ creat table aquaintance
  class varchar(4));
  ```
 #### 表截图
-![image]()
+![image](第三周作业/创建.png)
 ### 题目二
 #### 1.找出互不认识的⼈
 ```
 with t as (
-select f1 m from aquaintance
+select f1 m from acquaintance
 union 
-select f2 from aquaintance
+select f2 from acquaintance
 )
 select t1.m m1, t2.m m2
 from t t1, t t2
 where t1.m<>t2.m
-and not exists (select * from aquaintance where (f1=t1.m and f2=t2.m) or (f2=t1.m and f1=t2.m));
+and not exists (select * from acquaintance where (f1=t1.m and f2=t2.m) or (f2=t1.m and f1=t2.m));
 ```
 ![image]()
 #### 2.找出只在⼀个类别⾥出现的⼈。
 ```
 with t as (
-select f1 m,class from aquaintance
+select f1 m,class from acquaintance
 union 
-select f2,class from aquaintance
+select f2,class from acquaintance
 )
 select m from t t1 where not exists(select * from t where m=t1.m and class<>t1.class);
 ```
@@ -92,7 +92,7 @@ from   relation_temp a
        inner join relation_temp b
          on a.f2 = b.f1
 )
-select mid,count(1)/2 as relations --  连接度 只考虑直接认识
+select mid,count(1)/2 as relations 
 from (
         select *
         from   relation a
