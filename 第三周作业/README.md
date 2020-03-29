@@ -38,7 +38,28 @@ select m from t t1 where not exists(select * from t where m=t1.m and class<>t1.c
 ```
 ![image]()
 #### 4.找出每个类别⾥⾯朋友最多的⼈。
-
+```
+select class,fname
+from (
+        select class,f1 as fname,count(1) as num,
+               row_number()over(partition by class order by count(1) desc) as ordr
+        from ( select class,f1
+               from   acquaintance
+               union all
+               select class,f2
+               from   acquaintance
+             ) a
+        group by class,f1
+     ) a
+where ordr = 1;
+select f2
+from   acquaintance a
+where  exists ( select 1
+                from   acquaintance b
+                where  a.f2 = b.f1
+              )
+```
+![image]()
 #### 5.找出在同⼀类别⾥⾯通过朋友⽽结识的其他朋友（朋友的朋友也是朋友）。 
 #### 6.找出这样的⼈，通过他⽽结识的朋友对最多(p1和p2原本不相识，他们通过p3 结识，那么p3的连接度为1，找出连接度最⾼的⼈)。 
 #### 7.找出臭味相投的朋友，他们在所出现的所有类别⾥⾯都是朋友（并且不能有这 种情况，其中⼀个在某个类别⾥出现⽽另外⼀个不出现）
