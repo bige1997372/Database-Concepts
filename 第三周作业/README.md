@@ -61,7 +61,36 @@ where  exists ( select 1
 ```
 ![image]()
 #### 5.找出在同⼀类别⾥⾯通过朋友⽽结识的其他朋友（朋友的朋友也是朋友）。 
-#### 6.找出这样的⼈，通过他⽽结识的朋友对最多(p1和p2原本不相识，他们通过p3 结识，那么p3的连接度为1，找出连接度最⾼的⼈)。 
+#### 6.找出这样的⼈，通过他⽽结识的朋友对最多(p1和p2原本不相识，他们通过p3 结识，那么p3的连接度为1，找出连接度最⾼的⼈)。
+```
+with 
+relation_temp as 
+(
+select f1,f2,class
+from   acquaintance
+union all
+select f2,f1,class
+from   acquaintance
+),
+relation as
+(
+select a.f1,
+       a.f2 as mid,
+       b.f2 
+from   relation_temp a
+       inner join relation_temp b
+         on a.f2 = b.f1
+)
+select mid,count(1)/2 as relations --  连接度 只考虑直接认识
+from (
+        select *
+        from   relation a
+        where  a.f1 <> a.f2
+     ) a
+group by mid 
+order by 2 desc
+```
+![image]()
 #### 7.找出臭味相投的朋友，他们在所出现的所有类别⾥⾯都是朋友（并且不能有这 种情况，其中⼀个在某个类别⾥出现⽽另外⼀个不出现）
 ```
 select f1,f2,class from aquaintance t1
