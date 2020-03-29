@@ -34,7 +34,18 @@ select m from t t1 where not exists(select * from t where m=t1.m and class<>t1.c
 ![image]()
 #### 3.找出在所有类别⾥都有朋友的⼈。
 ```
-
+with t1 as
+	(
+		WITH t AS ( SELECT f1 m, class FROM acquaintance UNION SELECT f2, class FROM acquaintance ) 
+		SELECT m, Count( * ) AS c, Sum( Count( * ) ) OVER ( ) 
+	  FROM
+		  t 
+	  GROUP BY
+		  m
+		HAVING c=( SELECT count( DISTINCT class ) FROM acquaintance)
+	) 
+	SELECT
+	m FROM t1
 ```
 ![image]()
 #### 4.找出每个类别⾥⾯朋友最多的⼈。
