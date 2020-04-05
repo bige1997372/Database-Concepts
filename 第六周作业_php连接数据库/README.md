@@ -1,4 +1,33 @@
 ### 测试使用python或php连接两种以上数据库服务端，并执行简单查询并打印返回结果
+#### 连接MYSQL
+```
+<?php
+$mysql_server="localhost";
+$mysql_username="root";
+$mysql_password="";
+$mysql_database="第五周";
+//建立数据库链接
+$conn = mysqli_connect($mysql_server,$mysql_username,$mysql_password) or die("数据库链接错误");
+//选择某个数据库
+mysqli_query($conn,"set names 'utf8'");
+mysqli_select_db($conn,'第五周');
+//执行MySQL语句
+$result=mysqli_query($conn,"SELECT cust_id,cust_name FROM customers");
+if (!$result) {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}
+//提取数据
+while ($row=mysqli_fetch_row($result))
+    {
+        printf ("%s : %s",$row[0],$row[1]);
+        echo "<br>";
+    }
+?>
+```
+![image]()
+#### 连接sqlite
+
 ### 测试python或php使用两种以上不同方法连接同一数据库服务端，并执行简单查询并打印返回结果
 #### 第一种方法（数据库函数mysqli连接）
 ```
@@ -62,5 +91,46 @@ echo "</table>";
 
 </body>
 </html>
+```
+![image]()
+#### 第三种方法（使用PDO）
+```
+<?php
+ ini_set("display_errors", 0);
+error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL ^ E_WARNING);//忽略警告
+$db = array(
+    'host' => 'localhost',         //设置服务器地址
+    'port' => '3306',              //设端口 
+    'dbname' => '第五周',             //设置数据库名      
+    'username' => 'root',           //设置账号
+    'password' => '',      //设置密码
+    'charset' => 'utf8',             //设置编码格式
+    'dsn' => 'mysql:host=localhost;dbname=第五周;port=3306;charset=utf8',   //这里不知道为什么，也需要这样再写一遍。
+);
+$options = array(
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, //默认是PDO::ERRMODE_SILENT, 0, (忽略错误模式)
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // 默认是PDO::FETCH_BOTH, 4
+);
+try{
+    $pdo = new PDO($db['dsn'], $db['username'], $db['password'], $options);
+}catch(PDOException $e){
+    die('数据库连接失败:' . $e->getMessage());
+}
+echo '<pre/>';
+$stmt = $pdo->query('select cust_id,cust_name from customers'); //返回一个PDOStatement对象
+ 
+//$row = $stmt->fetch(); //从结果集中获取下一行，用于while循环
+$rows = $stmt->fetchAll(); //获取所有
+ 
+$row_count = $stmt->rowCount(); //记录数，2
+$i=0;
+for($i=0;$i<$row_count;$i++)
+{
+	echo $rows[$i][cust_id];
+	echo $rows[$i][cust_name];
+	echo '<br>';
+}
+?>
 ```
 ![image]()
