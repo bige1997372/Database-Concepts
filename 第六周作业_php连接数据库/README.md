@@ -28,4 +28,39 @@ while ($row=mysqli_fetch_row($result))
 ```
 ![image]()
 #### 第二种方法（使用ODBC）
+```
+<html>
+<body>
 
+<?php
+$conn=odbc_connect('23', 'root', '');
+if (!$conn)
+{
+    exit("连接失败: " . $conn);
+}
+
+$sql="SELECT cust_id,cust_name FROM customers";
+$rs=odbc_exec($conn,$sql);
+
+if (!$rs)
+{
+    exit("SQL 语句错误");
+}
+
+
+while (odbc_fetch_row($rs))
+{
+    $cust_id=odbc_result($rs,"cust_id");
+    $cust_name=odbc_result($rs,"cust_name");
+    echo "<tr><td>$cust_id</td>";
+    echo "<td>$cust_name</td></tr>";
+	echo "<br>";
+}
+odbc_close($conn);
+echo "</table>";
+?>
+
+</body>
+</html>
+```
+![image]()
