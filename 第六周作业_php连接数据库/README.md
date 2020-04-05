@@ -25,7 +25,7 @@ while ($row=mysqli_fetch_row($result))
     }
 ?>
 ```
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A_php%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/2.1.jpg)
 #### python连接sqlite
 ```
 #!/usr/bin/python
@@ -60,7 +60,7 @@ print ("Operation done successfully")
 conn.commit()
 conn.close()
 ```
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A_php%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/1.2.jpg)
 
 ### 测试python或php使用两种以上不同方法连接同一数据库服务端，并执行简单查询并打印返回结果
 #### 第一种方法（数据库函数mysqli连接）
@@ -89,7 +89,7 @@ while ($row=mysqli_fetch_row($result))
     }
 ?>
 ```
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A_php%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/2.1.jpg)
 #### 第二种方法（使用ODBC）
 ```
 <html>
@@ -126,7 +126,7 @@ echo "</table>";
 </body>
 </html>
 ```
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A_php%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/2.2.jpg)
 #### 第三种方法（使用PDO）
 ```
 <?php
@@ -167,4 +167,4 @@ for($i=0;$i<$row_count;$i++)
 }
 ?>
 ```
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%85%AD%E5%91%A8%E4%BD%9C%E4%B8%9A_php%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/2.3.jpg)
