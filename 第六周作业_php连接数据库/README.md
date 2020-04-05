@@ -1,5 +1,5 @@
 ### 测试使用python或php连接两种以上数据库服务端，并执行简单查询并打印返回结果
-#### 连接MYSQL
+#### php连接MYSQL
 ```
 <?php
 $mysql_server="localhost";
@@ -26,7 +26,41 @@ while ($row=mysqli_fetch_row($result))
 ?>
 ```
 ![image]()
-#### 连接sqlite
+#### python连接sqlite
+```
+#!/usr/bin/python
+
+import sqlite3
+
+conn = sqlite3.connect('test.db')
+print ("Opened database successfully")
+c = conn.cursor()
+
+c.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+      VALUES (1, 'Paul', 32, 'California', 20000.00 )")
+
+c.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+      VALUES (2, 'Allen', 25, 'Texas', 15000.00 )")
+
+c.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+      VALUES (3, 'Teddy', 23, 'Norway', 20000.00 )")
+
+c.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
+      VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 )")
+print ("Records created successfully")
+
+cursor = c.execute("SELECT id, name, address, salary  from COMPANY")
+for row in cursor:
+   print("ID = ", row[0])
+   print("NAME = ", row[1])
+   print("ADDRESS = ", row[2])
+   print ("SALARY = ", row[3], "\n")
+
+print ("Operation done successfully")
+conn.commit()
+conn.close()
+```
+![image]()
 
 ### 测试python或php使用两种以上不同方法连接同一数据库服务端，并执行简单查询并打印返回结果
 #### 第一种方法（数据库函数mysqli连接）
