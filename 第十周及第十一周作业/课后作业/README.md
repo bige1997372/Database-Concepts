@@ -1,15 +1,15 @@
 ### 题目一
 #### 安装XAMPP
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E5%91%A8%E5%8F%8A%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/1.jpg)
 ### 题目二
 #### 测试php，连接数据库
-![image]()
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E5%91%A8%E5%8F%8A%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/2.jpg)
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E5%91%A8%E5%8F%8A%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/3.jpg)
 ### 题目三
 #### 安装调试python的ORM框架sqlalchemy
 安装 sqlalchemy
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E5%91%A8%E5%8F%8A%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/4.jpg)
 安装pymysql
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E5%91%A8%E5%8F%8A%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/5.jpg)
 测试
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E5%91%A8%E5%8F%8A%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/6.jpg)
