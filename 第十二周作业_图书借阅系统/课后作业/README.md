@@ -1,6 +1,6 @@
 ### 题目一
 #### 案例一逻辑设计（E-R图）
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%91%A8%E4%BD%9C%E4%B8%9A_%E5%9B%BE%E4%B9%A6%E5%80%9F%E9%98%85%E7%B3%BB%E7%BB%9F/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/er.jpg)
 #### 物理实施（代码）
 ```
 CREATE TABLE user_info(
@@ -86,7 +86,7 @@ CREATE TABLE orderors(
 退书单：退货单号，退货日期，退货类型，发货方式，退书数量，操作员，审核状态，添加日期，备注，源单号。
 图书促销及赠品表：活动编号，促销书编号，促销时间，折扣，是否有赠品，赠品描述。
 #### 逻辑设计
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%91%A8%E4%BD%9C%E4%B8%9A_%E5%9B%BE%E4%B9%A6%E5%80%9F%E9%98%85%E7%B3%BB%E7%BB%9F/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/er2.jpg)
 #### 物理实现
 ```
 alter table book_info add column barcode varchar(30);
