@@ -1,5 +1,5 @@
 #### 查看服务器程序的配置文件
-![image]()
+![image](https://github.com/bige1997372/Database-Concepts/blob/master/%E7%AC%AC%E5%8D%81%E4%B8%89%E5%91%A8%E4%BD%9C%E4%B8%9A/%E8%AF%BE%E5%A0%82%E4%BD%9C%E4%B8%9A/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png)
 #### 了解各种配置的基本信息，与课件对比
 ServerRoot：apache的安装路径
 Timeout：apache配置的超时时间
